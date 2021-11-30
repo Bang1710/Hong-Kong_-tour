@@ -1,0 +1,609 @@
+@import "variables.scss";
+@import "mixin.scss";
+
+// Project Start Date: 25/11/2021 - version 1.0
+// Technology: HTML CSS SCSS
+// COMPONENTS
+// ------------------HEADER-------------------
+// - Logo
+// - Navigation top
+// - Menu Right Sidebar
+
+@import "header.scss";
+// ------------------THE END------------------
+
+// ------------------SLIDER-------------------
+// - Image slider
+// - Name Destination
+// - Area address
+// - day
+
+.slider {
+	background-color: rgba(101, 100, 96, 0.3);
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 320px;
+	width: 100%;
+
+	&__img {
+		object-fit: cover;
+	}
+
+	&__nd {
+		position: absolute;
+		left: 6%;
+		bottom: 15%;
+		.slider__heading {
+			@include fullSize(3.5rem, bold, 0, 3.5rem);
+			color: $textColorHeader;
+		}
+
+		.slider__describles {
+			@extend %flexStart;
+			padding-top: 20px;
+
+			&-area,
+			&-day {
+				@extend %flexStart;
+
+				&-img {
+					@include widthHeight(14px);
+					color: $textColor;
+					margin-right: 10px;
+				}
+
+				&-address,
+				&-time {
+					color: $textColorHeader;
+					@include fullSize(1.5rem, normal, 2px, 1.5rem);
+				}
+			}
+
+			&-day {
+				margin-left: 30px;
+			}
+		}
+	}
+}
+// ------------------THE END-------------------
+
+// ------------------CONTAINER-----------------
+// - Infor section
+// - image and contact
+// - Description and map, photos, program
+// - Best packages
+// - Search
+// - Image focus view Destination
+// - Tag
+// - Open and close, and comments of tourist
+// - Related packages
+
+.container {
+
+	&__infor-price {
+		padding-top: 30px;
+
+		.container__infor {
+			display: flex;
+			padding: 30px 15px 40px 15px;
+
+			&-tipologies {
+				display: flex;
+				flex: 1;
+
+				.tipologies-img {
+					@include widthHeight(40px);
+					object-fit: cover;
+				}
+
+				&-description {
+					padding-left: 15px;
+
+					h3 {
+						@include fullSize(1.4rem, bold, 2px, 1.4rem);
+						padding-bottom: 5px;
+						color: #555555;
+					}
+
+					h5 {
+						@include fullSize(1.4rem, normal, 1px, 2.7rem);
+						color: $textColor;
+
+						span {
+							padding: 2px 8px;
+							background-color: #f76570;
+							border-radius: 10px;
+							color: $textColorHeader;
+							margin: 4px 0 0 10px;
+							font-size: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__price {
+		height: auto;
+		&-sales {
+			@include widthHeight(370px, 100%);
+			background-color: #f76570;
+			color: $textColorHeader;
+			position: relative;
+			@extend %flexCenter;
+
+			&::before {
+				content: "SALE";
+				position: absolute;
+				top: 0;
+				transform: translateY(-50%);
+				right: 10%;
+				color: $textColorHeader;
+				@include fullSize(1.4rem, normal, 2px, 1.4rem);
+				padding: 5px 10px;
+				background-color: #555555;
+				border-radius: 30px;
+			}
+
+			.text {
+				display: flex;
+				align-items: baseline;
+				del {
+					@include fullSize(2rem, normal, 1px, 2rem);
+					opacity: 0.6;
+					padding-right: 6px;
+				}
+
+				h1 {
+					@include fullSize(3.2rem, normal, 1px, 3.2rem);
+					padding-right: 6px;
+				}
+
+				span {
+					@include fullSize(2rem, normal, 1px, 2rem);
+				}
+			}
+		}
+	}
+
+	&__img {
+		height: 482px;
+		width: 100%;
+		object-fit: cover;
+		padding-bottom: 40px;
+	}
+
+	&__list {
+		display: flex;
+		list-style: none;
+		padding-bottom: 40px;
+
+		&-items {
+			@include fullSize(1.4rem, normal, 1px, 2.7rem);
+			margin-right: 20px;
+			a {
+				padding: 5px 20px;
+				color: $textColor;
+			}
+
+			&:hover {
+				@extend %btn__primary;
+
+				a {
+					color: $textColorHeader;
+				}
+			}
+		}
+	}
+
+	&__discription {
+		h2 {
+			@include fullSize(2.5rem, bold, 0px, 2.5rem);
+			color: #555555;
+			padding-bottom: 30px;
+		}
+
+		P {
+			@include fullSize(1.4rem, normal, 1px, 2.7rem);
+			color: $textColor;
+			padding-bottom: 20px;
+		}
+
+		&-ds {
+			padding-top: 20px;
+			&-items {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				padding: 20px 0;
+				border-top: 1px solid #f1eeee;
+				border-bottom: 1px solid #eeecec;
+				&-define {
+					padding: 0 15px;
+					flex: 1;
+					@include fullSize(1.6rem, normal, 1px, 2.7rem);
+					color: #555555;
+				}
+
+				&-nd {
+					padding: 0 15px;
+					flex: 1;
+					@include fullSize(1.4rem, normal, 1px, 2.7rem);
+					color: $textColor;
+
+					.nd-items {
+						list-style: none;
+
+						.check {
+							display: flex;
+							align-items: baseline;
+							line-height: 32px;
+							.img-check {
+								@include widthHeight(12px);
+								margin-right: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__tourmap,
+	&__gallery,
+	&__daybyday {
+		padding: 40px 0;
+		border-top: 1px solid #f1eeee;
+		border-bottom: 1px solid #eeecec;
+		h3 {
+			@include fullSize(2.5rem, bold, 1px, 2.5rem);
+			color: #555555;
+			padding-bottom: 30px;
+		}
+	}
+
+	&__gallery {
+		&-listImage {
+			display: flex;
+
+			.img-items2 {
+				flex: 2;
+				display: flex;
+				flex-direction: column;
+				&-packSide1_4 {
+					display: flex;
+					flex: 1;
+					.pack-side1,
+					.pack-side4 {
+						@include widthHeight(242px, 212px);
+						margin-right: 16px;
+					}
+				}
+
+				&-pkSm1 {
+					flex: 1;
+					.pk-sm1 {
+						@include widthHeight(500px, 205px);
+						margin: 16px 16px 0 0;
+					}
+				}
+			}
+
+			.img-items1 {
+				flex: 1;
+				.pk-sm2 {
+					@include widthHeight(254px, auto);
+				}
+			}
+		}
+	}
+
+	&__daybyday {
+		p {
+			@include fullSize(1.4rem, normal, 1px, 2.7rem);
+			color: $textColor;
+			padding-bottom: 20px;
+		}
+
+		ul {
+			list-style: none;
+
+			li {
+				display: flex;
+				padding: 10px 0;
+				justify-content: flex-start;
+				align-items: center;
+				img {
+					@include widthHeight(25px);
+					background-color: #f76570;
+					color: $textColorHeader;
+					padding: 6px;
+				}
+
+				span {
+					padding-left: 20px;
+					@include fullSize(1.7rem, normal, 1px, 1.7rem);
+					color: $textColor;
+					b {
+						color: #555555;
+					}
+				}
+			}
+		}
+	}
+
+	&__form {
+		border: 1px solid #f1f1f1;
+		padding: 30px 30px 8px;
+
+		&-fullName,
+		&-mailAdrress,
+		&-phone,
+		&-textarea {
+			display: flex;
+
+			div {
+				flex: 1;
+				padding: 10px;
+				.input__name,
+				.input__surname,
+				.input__email,
+				.input__guest,
+				.input__phone,
+				.input__textarea {
+					padding: 8px 15px;
+					border: 1px solid #f1f1f1;
+					border-radius: 30px;
+					width: 100%;
+					background-color: #f9f9f9;
+				}
+			}
+		}
+
+		&-submit {
+			padding: 10px 10px 49px 10px;
+			.btn__send {
+				padding: 10px 20px;
+				border-radius: 30px;
+				background-color: #f76570;
+				color: $textColorHeader;
+				letter-spacing: 2px;
+				width: 100%;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__image-small {
+		padding: 30px 0 50px;
+		img {
+			@include widthHeight(100%, 232px);
+			object-fit: cover;
+		}
+	}
+
+	&__bestpackages {
+		h3 {
+			@include fullSize(2rem, bold, 1px, 2rem);
+			color: #555555;
+			padding-bottom: 5px;
+		}
+
+		.header__tour-berlin {
+			padding: 15px 0;
+		}
+
+		.berlin-btn {
+			margin-top: 15px;
+		}
+	}
+
+	&__search {
+		padding-top: 40px;
+		h3 {
+			@include fullSize(2rem, bold, 1px, 2rem);
+			color: #555555;
+			margin-bottom: 20px;
+		}
+
+		&-input {
+			margin-bottom: 20px;
+			input {
+				padding: 10px 20px;
+				border: 1px solid #f1f1f1;
+				border-radius: 30px;
+				width: 100%;
+				background-color: #f9f9f9;
+			}
+		}
+
+		&-submit {
+			input {
+				padding: 10px 20px;
+				border: 1px solid #f1f1f1;
+				border-radius: 30px;
+				color: $textColorHeader;
+				background-color: #14b9d5;
+				letter-spacing: 1px;
+			}
+		}
+	}
+
+	&__package-europe {
+		margin-top: 50px;
+		position: relative;
+
+		&-img {
+			width: 100%;
+		}
+
+		&-describle {
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			bottom: 0;
+			right: 0;
+			background-image: linear-gradient(
+				to bottom,
+				transparent,
+				rgba(0, 0, 0, 0.3)
+			);
+
+			&-img {
+				@include widthHeight(40px);
+			}
+
+			&-content {
+				h3 {
+					color: $textColorHeader;
+					@include fullSize(2rem, 500, 1px, 2rem);
+					padding-bottom: 6px;
+				}
+				span {
+					color: $textColorHeader;
+					@include fullSize(1.5rem, 400, 1px, 1.5rem);
+				}
+			}
+
+			&:hover .container__img-focus {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__img-focus {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #08aeea;
+		@extend %flexCenter;
+		opacity: 0;
+		transition: opacity 0.4s linear;
+
+		&-list {
+			list-style: none;
+			color: $textColorHeader;
+		}
+
+		&-items {
+			text-align: center;
+			@include fullSize(1.5rem, 400, 1px, 2.8rem);
+		}
+
+		&-items:nth-child(1) {
+			@include fullSize(2rem, bold, 1px, 3rem);
+			padding-bottom: 15px;
+		}
+
+		&-btn {
+			color: #08aeea;
+			padding: 6px 26px;
+			@include fullSize(1.5rem, 400, 2px, normal);
+			text-transform: uppercase;
+			background-color: white;
+			font-weight: 400;
+			margin-top: 20px;
+			border-radius: 30px;
+		}
+	}
+
+	&__tag {
+		h3 {
+			padding:30px 0 20px 0;
+			@include fullSize(2rem, bold, 1px, 2.7rem);
+			color: #555555;
+		}
+
+		&-list {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			padding-bottom: 40px;
+			li {
+				@include fullSize(1.2rem, normal, 1px, 1.2rem);
+				color: $textColor;	
+				padding: 8px 20px;
+				border-radius: 30px;
+				border: 1px solid #f1f1f1;
+				margin: 5px 5px 5px 0;	
+			}
+		}
+	}
+
+	&__open-close {
+		list-style: none;
+		padding-bottom: 30px;
+		li {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@include fullSize(1.4rem, normal, 1px, 2.7rem);
+			color: $textColor;
+			padding-bottom: 10px;
+			span {
+				@include fullSize(1.1rem, normal, 1px, 1.1rem);
+				color: $textColorHeader;
+				padding: 4px 20px 3px;
+				background-color: #ffd000;
+				border-radius: 30px;
+			}
+		}
+	}
+
+	&__comment {
+		&-nd {
+			padding: 20px;
+			background-color: #08aeea;
+			margin-bottom: 35px;
+			position: relative;
+			p {
+				color:$textColorHeader;
+				@include fullSize(1.4rem, normal, 1px, 2.7rem);
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -30px;
+				left: 20px;
+				border-width: 15px;
+				border-color: #08aeea transparent transparent transparent;
+				border-style: solid;
+			}
+		}
+
+		&-person {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			img {
+				@include widthHeight(70px);
+				object-fit: cover;
+				border-radius: 50%;
+			}
+
+			&-describle {
+				padding-left: 20px;
+				
+				h2 {
+					@include fullSize(1.7rem, normal, 1px, 2.7rem);
+					color:#555555;
+					padding-bottom: 5px;
+				}
+				h4 {
+					@include fullSize(1.4rem, normal, 1px, 2.7rem);
+					color: $textColor;
+				}
+			}
+		}
+	}
+}
+
+

@@ -33,10 +33,13 @@
 		&-items {
 			position: relative;
 			padding: 25px 18px;
+			@extend %textUpper;
 			a {
 				color: $textColorHeader;
 				line-height: 1.4rem;
-				@extend %textUpper;
+				// letter-spacing: 2px;
+				// text-transform: capitalize;
+				// font-weight: 500;
 			}
 
 			&:hover .header__navbar-level1 {
@@ -50,7 +53,8 @@
 			position: absolute;
 			top: 100%;
 			background-color: $textColorHeader;
-			@extend %boxShadow;
+			// @extend %boxShadow;
+			box-shadow: 2px 3px 6px 0 #bdbaba;
 			list-style: none;
 			width: 190px;
 			border-radius: 2px;
@@ -65,6 +69,7 @@
 				a {
 					color: $textColor;
 					text-transform: capitalize;
+					font-weight: 500;
 				}
 
 				i {

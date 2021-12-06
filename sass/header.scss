@@ -255,7 +255,7 @@
 
 		.header__img-focus {
 			@include widthHeight(279px);
-			@extend %flexStart;
+			@extend %flexCenter;
 			position: absolute;
 			top: 30px;
 			left: 15px;

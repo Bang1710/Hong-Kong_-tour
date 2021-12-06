@@ -1,6 +1,9 @@
 @import "variables.scss";
 @import "mixin.scss";
 
+$heightPk-sm: 100%;
+
+
 // Project Start Date: 25/11/2021 - version 1.0
 // Technology: HTML CSS SCSS
 // COMPONENTS
@@ -288,6 +291,10 @@
 				padding-left: 7.5px;
 				padding-right: 7.5px;
 			}
+		}
+
+		.pack-side1, .pack-side4 {
+			height: calc(1/2*$heightPk-sm);
 		}
 	}
 

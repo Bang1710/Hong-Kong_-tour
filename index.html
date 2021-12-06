@@ -618,6 +618,11 @@
 
 
                         <div class="container__gallery">
+                            <!-- fix image height:195px >= 1239px -->
+                            <!-- 1024px: 260px -->
+                            <!-- 860px -> 1023px height: 199px; width: 256px; -->
+                            <!-- 600px: height: 221px; width: 100%; -->
+                            <!-- <=600px: h132px -->
                             <h3>Gallery</h3>
                             <div id="photo" class="row">
                                 <div class="col l-8">
@@ -625,7 +630,7 @@
                                         <div class="row r1">
                                             <div class="col l-6">
                                                 <div class="image">
-                                                    <img src="./image/pack-slide-4.jpg" alt="" class="pack-side4">
+                                                    <img src="./image/pack-slide-4.jpg"  alt="" class="pack-side4">
                                                 </div>
                                             </div>
                                             <div class="col l-6">

@@ -1,11 +1,11 @@
-.slider__nd .slider__describles-area, .slider__nd .slider__describles-day, .slider__nd .slider__describles, .header__menubar-img .header__img-focus,
-.header__rightSidebar-img .header__img-focus, .header__navbar-level1-items, .header__navbar-level2-items, .header__navbar, .header {
+.slider__nd .slider__describles-area, .slider__nd .slider__describles-day, .slider__nd .slider__describles, .header__navbar-level1-items, .header__navbar-level2-items, .header__navbar, .header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.container__img-focus, .container__price-sales {
+.container__img-focus, .container__price-sales, .header__menubar-img .header__img-focus,
+.header__rightSidebar-img .header__img-focus {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,14 +47,14 @@
   color: white;
 }
 
-.slider__nd .slider__describles-area, .slider__nd .slider__describles-day, .slider__nd .slider__describles, .header__menubar-img .header__img-focus,
-.header__rightSidebar-img .header__img-focus, .header__navbar-level1-items, .header__navbar-level2-items, .header__navbar, .header {
+.slider__nd .slider__describles-area, .slider__nd .slider__describles-day, .slider__nd .slider__describles, .header__navbar-level1-items, .header__navbar-level2-items, .header__navbar, .header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.container__img-focus, .container__price-sales {
+.container__img-focus, .container__price-sales, .header__menubar-img .header__img-focus,
+.header__rightSidebar-img .header__img-focus {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -752,6 +752,9 @@
     padding-right: 7.5px;
   }
 }
+.container__gallery .pack-side1, .container__gallery .pack-side4 {
+  height: 50%;
+}
 .container__daybyday {
   border-bottom: none;
   padding-bottom: 40px;
@@ -1204,14 +1207,14 @@
   line-height: 2.4rem;
 }
 
-.header, .header__navbar, .header__navbar-level1-items, .header__navbar-level2-items, .header__menubar-img .header__img-focus,
-.header__rightSidebar-img .header__img-focus, .slider__nd .slider__describles, .slider__nd .slider__describles-area, .slider__nd .slider__describles-day {
+.header, .header__navbar, .header__navbar-level1-items, .header__navbar-level2-items, .slider__nd .slider__describles, .slider__nd .slider__describles-area, .slider__nd .slider__describles-day {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.container__price-sales, .container__img-focus {
+.header__menubar-img .header__img-focus,
+.header__rightSidebar-img .header__img-focus, .container__price-sales, .container__img-focus {
   display: flex;
   justify-content: center;
   align-items: center;

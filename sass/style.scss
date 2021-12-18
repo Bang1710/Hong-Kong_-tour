@@ -281,6 +281,11 @@ $heightPk-sm: 100%;
 			padding-top: 15px;
 		}
 
+		img.pk-sm2 {
+			height: 388px;
+		}
+				
+
 		@media (max-width: 1400px) {
 			.row {
 				margin-left: -7.5px;
@@ -293,9 +298,6 @@ $heightPk-sm: 100%;
 			}
 		}
 
-		.pack-side1, .pack-side4 {
-			height: calc(1/2*$heightPk-sm);
-		}
 	}
 
 	&__daybyday {
@@ -362,6 +364,11 @@ $heightPk-sm: 100%;
 			}
 		}
 
+		input:focus, textarea:focus {
+			border-color: black;
+			transition: .4s linear;
+		}
+
 		&-submit {
 			padding: 10px 10px 49px 10px;
 			.btn__send {
@@ -372,6 +379,20 @@ $heightPk-sm: 100%;
 				letter-spacing: 2px;
 				width: 100%;
 				cursor: pointer;
+				&:hover {
+					background-color: #26A95E;
+					// transition: .4s linear;
+					animation: grow .6s linear;
+				}
+			}
+
+			@keyframes grow {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -416,6 +437,10 @@ $heightPk-sm: 100%;
 				border-radius: 30px;
 				width: 100%;
 				background-color: #f9f9f9;
+
+				&:focus {
+					border-color:black;
+				}
 			}
 		}
 
@@ -496,6 +521,12 @@ $heightPk-sm: 100%;
 		&-items {
 			text-align: center;
 			@include fullSize(1.5rem, 400, 1px, 2.8rem);
+			&:hover span {
+				background-color: #786464;
+				border-radius: 20px;
+				padding: 5px 20px;
+				transition: 0.2s linear;
+			}
 		}
 
 		&-items:nth-child(1) {
@@ -512,6 +543,11 @@ $heightPk-sm: 100%;
 			font-weight: 400;
 			margin-top: 20px;
 			border-radius: 30px;
+
+			&:hover {
+				background-color: #786464;
+				transition: 0.2s linear;
+			}
 		}
 	}
 
@@ -534,6 +570,13 @@ $heightPk-sm: 100%;
 				border-radius: 30px;
 				border: 1px solid #f1f1f1;
 				margin: 5px 5px 5px 0;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #14b9d5;
+					transition: .3s ease-in;
+					color: white;
+				}
 			}
 		}
 	}

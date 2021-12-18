@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./sass/reset.css">
     <link rel="stylesheet" href="./assets/grid.css">
-    <link rel="stylesheet" href="./font/themify-icons/themify-icons.css">
+    <!-- <link rel="stylesheet" href="./font/themify-icons/themify-icons.css"> -->
     <link rel="stylesheet" href="./font/fontawesome-free-5.15.4-web/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,12 +18,13 @@
     <title>Hong Kong - Love Travel</title>
 </head>
 <body>
-
     <!-- MENU RIGHT SIDE BAR -->
     <input type="checkbox" id="input__menu" style="display: none;" class="input__menu">
     <div class="header__menubar">
         <div class="header__menubar-content">BEST</div>
-        <div class="header__menubar-packages">packages</div>
+        <div class="header__package-heading text-ct">
+            <span class="header__menubar-packages">packages</span>
+        </div>
         <div class="header__tour">
             <div class="header__tour-berlin">
                 <div class="header__tour-berlin-img">
@@ -79,13 +80,21 @@
                 </div>
             </div>
             <div class="header__img-focus">
-                <a href="" class="header__img-focus-link">
+                <a href="#" class="header__img-focus-link">
                     <div class="header__img-focus-content">
                         <ul class="header__img-focus-list">
-                            <li class="header__img-focus-items">Packages</li>
-                            <li class="header__img-focus-items">Berlin</li>
-                            <li class="header__img-focus-items">Amsterdam</li>
-                            <li class="header__img-focus-items">Tuscany</li>
+                            <li class="header__img-focus-items">
+                                <span>Packages</span>
+                            </li>
+                            <li class="header__img-focus-items">
+                                <span>Berlin</span>
+                            </li>
+                            <li class="header__img-focus-items">
+                                <span>Amsterdam</span>
+                            </li>
+                            <li class="header__img-focus-items">
+                                <span>Tuscany</span>
+                            </li>
                         </ul>
                     </div>
                     <div class="header__img-focus-btn">View Destination</div>
@@ -93,7 +102,9 @@
             </div>
         </div>
         <div class="header__menubar-content">LAST</div>
-        <div class="header__menubar-packages">Minutes</div>
+        <div class="header__package-heading text-ct">
+            <span class="header__menubar-packages">Minutes</span>
+        </div>
         <div class="header__tour">
             <div class="header__tour-berlin">
                 <div class="header__tour-berlin-img">
@@ -143,7 +154,7 @@
     <div class="header__rightSidebar">
         <ul class="header__rightSidebar-list">
             <li class="header__rightSidebar-items">
-                <a class="header__link-items">home</a>
+                <a href="#" class="header__link-items">home</a>
             </li>
             <li class="header__rightSidebar-items">
                 <a class="header__link-items">
@@ -464,6 +475,7 @@
 
         <!-- CONTAINER -->
         <div class="container" >
+            
             <!-- Information section -->
             <div class="container__infor-price">
                 <div class="grid wide">
@@ -625,15 +637,15 @@
                             <!-- <=600px: h132px -->
                             <h3>Gallery</h3>
                             <div id="photo" class="row">
-                                <div class="col l-8">
+                                <div class="col l-8 m-8">
                                     <div class="colum1">
                                         <div class="row r1">
-                                            <div class="col l-6">
+                                            <div class="col l-6 c-6">
                                                 <div class="image">
                                                     <img src="./image/pack-slide-4.jpg"  alt="" class="pack-side4">
                                                 </div>
                                             </div>
-                                            <div class="col l-6">
+                                            <div class="col l-6 c-6">
                                                 <div class="image">
                                                     <img src="./image/pack-slide-1.jpg" alt="" class="pack-side1">
                                                 </div>
@@ -648,7 +660,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col l-4">
+                                <div class="col l-4 m-4 c-12">
                                     <img src="./image/pk-sm-2.jpg" alt="" class="pk-sm2">
                                 </div>
                             </div>
@@ -699,7 +711,6 @@
                                 </li>
                             </ul>
                         </div>
-                    
                     
                     
                     </div>
@@ -807,13 +818,21 @@
                                 </div>
 
                                 <div class="container__img-focus">
-                                    <a href="" class="container__img-focus-link">
+                                    <a href="#" class="container__img-focus-link">
                                         <div class="container__img-focus-content">
                                             <ul class="container__img-focus-list">
-                                                <li class="container__img-focus-items">PACKAGES</li>
-                                                <li class="container__img-focus-items">Berlin</li>
-                                                <li class="container__img-focus-items">Amsterdam</li>
-                                                <li class="container__img-focus-items">Tuscany</li>
+                                                <li class="container__img-focus-items">
+                                                    <span>PACKAGES</span>
+                                                </li>
+                                                <li class="container__img-focus-items">
+                                                    <span>Berlin</span>
+                                                </li>
+                                                <li class="container__img-focus-items">
+                                                    <span>Amsterdam</span>
+                                                </li>
+                                                <li class="container__img-focus-items">
+                                                    <span>Tuscany</span>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="container__img-focus-btn">View Destination</div>
@@ -1146,5 +1165,6 @@
         </div>
 
     </div>
+
 </body>
 </html>

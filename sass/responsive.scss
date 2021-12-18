@@ -3,10 +3,6 @@
 
 // THE COMMON
 
-@media (min-width:1240px) {
-	
-}
-
 @media (min-width: 1024px) and (max-width: 1239px) {
 	.wide .col {
 		padding-left: 25px;
@@ -190,6 +186,71 @@
 			height: 40vh;
 		}
 	}
+
+	&__gallery {
+		@media (min-width: 1023px) and (max-width: 1215px) {
+			.row {
+				margin-left: -7.5px;
+				margin-right: -7.5px;
+			}
+
+			.col {
+				padding-left: 7.5px;
+				padding-right: 7.5px;
+			}
+
+			img.pk-sm2 {
+				height: 490px;
+				width: 100%;
+			}
+		}
+
+		@media (min-width: 841px) and (max-width: 1023px) {
+			img.pack-side4 {
+				width: 257px;
+			}
+
+			img.pack-side1 {
+				width: 256px;
+			}
+
+			img.pk-sm2 {
+				height: 403px;
+				width: 100%;
+			}
+		}
+
+		@media (min-width: 441px) and (max-width: 739px) {
+		 .row {
+			justify-content: flex-start;
+			}
+		}
+
+		@media (min-width: 740px) and (max-width: 840px) {
+			img.pack-side4 {
+				width: 215px;
+			}
+
+			img.pack-side1 {
+				width: 215px;
+			}
+
+			img.pk-sm2 {
+				height: 342px;
+				width: 100%;
+			}
+		}
+
+		@media (max-width:739px) {
+			img.pk-sm2 {
+				display: none;
+			}
+
+
+		}
+
+
+	}
 }
 
 // -------------------Footer-------------------
@@ -234,7 +295,6 @@
 			button {
 				padding: 14px 70px;
 			}
-
 		}
 
 		&__background {
@@ -265,7 +325,7 @@
 				margin-top: 10px;
 				margin-left: 0;
 			}
-			
+
 			input {
 				width: 100%;
 			}
@@ -307,20 +367,20 @@
 		.row {
 			justify-content: center;
 		}
-	
+
 		.header .row {
 			justify-content: flex-start;
 		}
-	
+
 		.c-12 {
 			flex: 0 0 90%;
 			max-width: 90%;
 		}
-	
+
 		&__background {
 			width: 83%;
 		}
-		
+
 		&__img-paralax {
 			height: 1550px;
 		}
@@ -330,21 +390,19 @@
 		&__background {
 			width: 85%;
 		}
-	
+
 		&__address {
 			width: 85%;
 		}
 	}
-	
+
 	@media (max-width: 330px) {
 		&__background {
 			width: 80%;
 		}
-	
+
 		&__address {
 			width: 80%;
-		} 
-	
+		}
 	}
-	
 }
